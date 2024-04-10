@@ -9,17 +9,18 @@ import blurCyanImage from '@/images/blur-cyan.png'
 import blurIndigoImage from '@/images/blur-indigo.png'
 
 const codeLanguage = 'javascript'
-const code = `export default {
-  strategy: 'predictive',
-  engine: {
-    cpus: 12,
-    backups: ['./storage/cache.wtf'],
-  },
-}`
+const code = `import { JellyButton } from 'jelly-ui'
+
+const CloseButton() => (
+  <JellyButton variant="danger">
+    Close
+  </JellyButton>
+);`
 
 const tabs = [
-  { name: 'cache-advance.config.js', isActive: true },
-  { name: 'package.json', isActive: false },
+  { name: 'CloseButton.tsx', isActive: true },
+  { name: 'cookbook.json', isActive: false },
+  { name: 'secret-recipes.json', isActive: false },
 ]
 
 function TrafficLightsIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -56,8 +57,11 @@ export function Hero() {
               </p>
               <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
                 <Button href="/">Get started</Button>
-                <Button href="/" variant="secondary">
+                <Button href="https://github.com/IINU/jelly-docs" variant="secondary">
                   View on GitHub
+                </Button>
+                <Button href="https://www.npmjs.com/package/@getjelly/jelly-ui" variant="secondary">
+                  View on NPM
                 </Button>
               </div>
             </div>
