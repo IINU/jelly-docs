@@ -1,8 +1,11 @@
+import { title } from "process";
+
 export const navigation = [
   {
     title: 'Jelly UI',
     links: [
       { title: 'Getting started', href: '/' },
+      { title : 'Showcase', href: '/demo' },
       { title: 'Installation', href: '/docs/installation' },
     ],
   },
